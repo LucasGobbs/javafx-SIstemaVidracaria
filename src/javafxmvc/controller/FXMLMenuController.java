@@ -29,6 +29,18 @@ public class FXMLMenuController implements Initializable {
         AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLVendasEmpresa.fxml"));
         anchorPane.getChildren().setAll(a);
     }
+    public void handleCadastroCliente() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLCadastroCliente.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    public void handleCadastroFuncionario() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLCadastroFuncionario.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    public void handleCadastroVenda() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLCadastroVenda.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

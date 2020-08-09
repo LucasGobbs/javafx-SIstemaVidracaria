@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLMenuController">
    <children>
       <MenuBar>
         <menus>
@@ -14,6 +14,7 @@
             <items>
               <MenuItem mnemonicParsing="false" text="Fábrica" />
                   <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" onAction="#handleMenuVendas" text="Em estoque" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCadastroVenda" text="Cadastro" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Compras">
@@ -31,8 +32,14 @@
               <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" text="Quantidade de Produtos em Estoque" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Cadastro">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleCadastroCliente" text="Cliente" />
+                  <MenuItem fx:id="menuItemCadastrosClientes1" mnemonicParsing="false" onAction="#handleCadastroFuncionario" text="Funcionario" />
+               </items>
+            </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane fx:id="anchorPane" prefHeight="376.0" prefWidth="600.0" />
+      <AnchorPane fx:id="anchorPane" prefHeight="494.0" prefWidth="705.0" />
    </children>
 </VBox>
