@@ -9,7 +9,8 @@ public class Produto implements Serializable {
     private double preco;
     private int quantidade;
     private Categoria categoria;
-
+    private boolean personalizado;
+    private String descricao;
     public Produto() {
     }
 
@@ -18,8 +19,32 @@ public class Produto implements Serializable {
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
+        this.personalizado = false;
     }
-
+    public Produto(int cdProduto, String nome, double preco, int quantidade,String descricao) {
+        this.cdProduto = cdProduto;
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        this.descricao = descricao;
+        this.personalizado = true;
+      
+    }
+    public void addQuantidade(int plus){
+        this.quantidade += plus;
+    }
+    public void setPersonalizado(boolean flag){
+        personalizado = flag;
+    }
+    public boolean getPersonalizado(){
+        return personalizado;
+    }
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
+    }
+    public String getDescricao(){
+        return descricao;
+    }
     public int getCdProduto() {
         return cdProduto;
     }

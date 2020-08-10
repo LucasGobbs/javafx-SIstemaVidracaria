@@ -29,6 +29,18 @@ public class FXMLMenuController implements Initializable {
         AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLVendasEmpresa.fxml"));
         anchorPane.getChildren().setAll(a);
     }
+    public void handleEncomendas() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLEncomendas.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    public void handleProducao() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLProducao.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    public void handleEstoque() throws IOException{
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLEstoque.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
     public void handleCadastroCliente() throws IOException{
         AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/javafxmvc/view/FXMLCadastroCliente.fxml"));
         anchorPane.getChildren().setAll(a);

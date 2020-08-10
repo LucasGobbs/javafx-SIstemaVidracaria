@@ -9,18 +9,47 @@ public class Venda implements Serializable {
     private int cdVenda;
     private LocalDate data;
     private double valor;
-    private boolean pago;
+    private boolean personalizado;
+    private String descricao;
     private List<ItemDeVenda> itensDeVenda;
     private Cliente cliente;
-
+    private Vendedor vendedor;
     public Venda() {
     }
 
-    public Venda(int cdvenda, LocalDate data, double valor, boolean pago) {
+    public Venda(int cdvenda, LocalDate data, double valor) {
         this.cdVenda = cdvenda;
         this.data = data;
         this.valor = valor;
-        this.pago = pago;
+       
+    }
+    public Venda(int cdvenda, Cliente cliente, Vendedor vendedor, double valor) {
+        this.cdVenda = cdvenda;
+        //this.data = data;
+        this.valor = valor;
+        this.cliente = cliente;
+        this.vendedor = vendedor;
+    }
+    public Venda(int cdvenda, Cliente cliente, Vendedor vendedor, double valor, boolean personalizado, String descricao) {
+        this.cdVenda = cdvenda;
+        //this.data = data;
+        this.valor = valor;
+        this.cliente = cliente;
+        this.vendedor = vendedor;
+        this.personalizado = personalizado;
+        this.descricao = descricao;
+    }
+    public void setPersonalizado(boolean flag){
+        personalizado = flag;
+    }
+    public boolean getPersonalizado(boolean flag){
+        return personalizado;
+    }
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
+    }
+    public String getDescricao(){
+        return descricao;
     }
 
     public int getCdVenda() {
@@ -46,15 +75,6 @@ public class Venda implements Serializable {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    public boolean getPago() {
-        return pago;
-    }
-
-    public void setPago(boolean pago) {
-        this.pago = pago;
-    }
-
     public List<ItemDeVenda> getItensDeVenda() {
         return itensDeVenda;
     }
@@ -69,6 +89,13 @@ public class Venda implements Serializable {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
     }
     
 }

@@ -3,64 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLEstoqueController">
+<AnchorPane fx:id="anchorPane" prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLEstoqueController">
    <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="Vendas">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Fábrica" />
-                  <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" text="Em estoque" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Compras">
-            <items>
-              <MenuItem fx:id="menuItemProcessosVendas" mnemonicParsing="false" text="Vendas" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Encomendas">
-               <items>
-                  <MenuItem fx:id="menuItemGraficosVendasPorMes" mnemonicParsing="false" text="Vendas por Mês" />
-               </items>
-            </Menu>
-          <Menu mnemonicParsing="false" text="Estoque">
-            <items>
-              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" text="Quantidade de Produtos em Estoque" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <AnchorPane fx:id="anchorPane" prefHeight="376.0" prefWidth="600.0">
-         <children>
-            <TableView layoutX="304.0" prefHeight="323.0" prefWidth="296.0">
-              <columns>
-                <TableColumn prefWidth="217.0" text="Produto" />
-                <TableColumn prefWidth="78.0" text="Qtd." />
-              </columns>
-            </TableView>
-            <Label layoutX="26.0" layoutY="84.0" text="Produto" />
-            <ComboBox layoutX="98.0" layoutY="80.0" prefHeight="25.0" prefWidth="183.0" />
-            <Label layoutX="26.0" layoutY="125.0" text="Quantidade" />
-            <TextField layoutX="98.0" layoutY="121.0" prefHeight="25.0" prefWidth="76.0" />
-            <Button layoutX="136.0" layoutY="188.0" mnemonicParsing="false" text="Adicionar" />
-            <Button layoutX="218.0" layoutY="188.0" mnemonicParsing="false" text="Remover" />
-            <Button layoutX="495.0" layoutY="331.0" mnemonicParsing="false" text="Novo Produto" />
-            <Label layoutX="112.0" layoutY="26.0" prefHeight="34.0" prefWidth="91.0" text="ESTOQUE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Button layoutX="392.0" layoutY="331.0" mnemonicParsing="false" text="Novo Produto" />
-         </children></AnchorPane>
+      <TableView fx:id="tableViewProduto" layoutX="304.0" layoutY="75.0" prefHeight="248.0" prefWidth="286.0">
+         <columns>
+            <TableColumn fx:id="tableColumnProdutoNome" prefWidth="192.0" text="Produto" />
+            <TableColumn fx:id="tableColumnProdutoQuantidade" prefWidth="103.0" text="Qtd." />
+         </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="84.0" text="Produto" />
+      <ComboBox fx:id="comboBoxProduto" layoutX="98.0" layoutY="80.0" prefHeight="25.0" prefWidth="183.0" />
+      <Label layoutX="26.0" layoutY="125.0" text="Quantidade" />
+      <TextField fx:id="textfieldQuantidade" layoutX="98.0" layoutY="121.0" prefHeight="25.0" prefWidth="76.0" />
+      <Button layoutX="97.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleAdicionar" text="Adicionar" />
+      <Button layoutX="98.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleRemover" text="Remover" />
+      <Label layoutX="112.0" layoutY="26.0" prefHeight="34.0" prefWidth="91.0" text="ESTOQUE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
-</VBox>
+</AnchorPane>

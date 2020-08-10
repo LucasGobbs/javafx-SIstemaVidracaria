@@ -33,7 +33,7 @@ public class VendaDAO {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setDate(1, Date.valueOf(venda.getData()));
             stmt.setDouble(2, venda.getValor());
-            stmt.setBoolean(3, venda.getPago());
+            //stmt.setBoolean(3, venda.getPago());
             stmt.setInt(4, venda.getCliente().getCdCliente());
             stmt.execute();
             return true;
@@ -49,7 +49,7 @@ public class VendaDAO {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setDate(1, Date.valueOf(venda.getData()));
             stmt.setDouble(2, venda.getValor());
-            stmt.setBoolean(3, venda.getPago());
+            //stmt.setBoolean(3, venda.getPago());
             stmt.setInt(4, venda.getCliente().getCdCliente());
             stmt.setInt(5, venda.getCdVenda());
             stmt.execute();
@@ -87,7 +87,7 @@ public class VendaDAO {
                 venda.setCdVenda(resultado.getInt("cdVenda"));
                 venda.setData(resultado.getDate("data").toLocalDate());
                 venda.setValor(resultado.getDouble("valor"));
-                venda.setPago(resultado.getBoolean("pago"));
+                //venda.setPago(resultado.getBoolean("pago"));
                 cliente.setCdCliente(resultado.getInt("cdCliente"));
 
                 //Obtendo os dados completos do Cliente associado à Venda
@@ -122,7 +122,7 @@ public class VendaDAO {
                 venda.setCdVenda(resultado.getInt("cdVenda"));
                 venda.setData(resultado.getDate("data").toLocalDate());
                 venda.setValor(resultado.getDouble("valor"));
-                venda.setPago(resultado.getBoolean("pago"));
+                //venda.setPago(resultado.getBoolean("pago"));
                 cliente.setCdCliente(resultado.getInt("cdCliente"));
                 venda.setCliente(cliente);
                 retorno = venda;

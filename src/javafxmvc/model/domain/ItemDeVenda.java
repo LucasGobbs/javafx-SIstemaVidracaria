@@ -9,10 +9,18 @@ public class ItemDeVenda implements Serializable {
     private double valor;
     private Produto produto;
     private Venda venda;
-
+    private String descricao;
     public ItemDeVenda() {
     }
-
+    public ItemDeVenda(Produto produto, int quantidade) {
+        this.produto = produto;
+        this.quantidade = quantidade;
+        this.descricao = produto.getDescricao();
+    }
+    
+    public String getDescricao(){
+        return descricao;
+    }
     public int getCdItemDeVenda() {
         return cdItemDeVenda;
     }

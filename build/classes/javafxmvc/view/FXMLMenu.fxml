@@ -10,26 +10,16 @@
    <children>
       <MenuBar>
         <menus>
-          <Menu mnemonicParsing="false" text="Vendas">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Fábrica" />
-                  <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" onAction="#handleMenuVendas" text="Em estoque" />
-                  <MenuItem mnemonicParsing="false" onAction="#handleCadastroVenda" text="Cadastro" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Compras">
-            <items>
-              <MenuItem fx:id="menuItemProcessosVendas" mnemonicParsing="false" text="Vendas" />
-            </items>
-          </Menu>
             <Menu mnemonicParsing="false" text="Encomendas">
                <items>
-                  <MenuItem fx:id="menuItemGraficosVendasPorMes" mnemonicParsing="false" text="Vendas por Mês" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCadastroVenda" text="Cadastro" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleEncomendas" text="Personalizadas" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleProducao" text="Fila de Produção" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Estoque">
             <items>
-              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" text="Quantidade de Produtos em Estoque" />
+              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" onAction="#handleEstoque" text="Listagem" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Cadastro">
