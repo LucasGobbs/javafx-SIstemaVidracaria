@@ -23,14 +23,23 @@ Recebe requisições dos pedidos com produtos a serem cortados dentro da loja, e
 ### Protótipo e Resultado
 Os protótipos foram feitos no SceneBuilder e posteriormente utilizando javafx foram implementados.
 
+#### Tela Principal
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/tela_principal.PNG"  width="340" height="350">
+
 #### Cadastro de Cliente
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/cadastro_cliente.PNG"  width="340" height="350">
 
 #### Cadastro de funcionário
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/cadastro_funcionario.PNG"  width="340" height="350">
 
 #### Manejamento de estoque
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/estoque.PNG"  width="340" height="350">
 
 #### Cadastro de venda
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/cadastro_venda.PNG"  width="340" height="350">
 
 #### Requisições Personalizadas
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/encomendas_personalizadas.PNG"  width="340" height="350">
 
 #### Requisições não Personalizadas (Fila de produção)
+<img src="https://github.com/LucasGobbs/javafx-SistemaVidracaria/blob/master/git-images/fila_de_produ%C3%A7%C3%A3o.PNG"  width="340" height="350">
